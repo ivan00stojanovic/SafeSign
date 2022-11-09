@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/855e3f5928.js" crossorigin="anonymous"></script>
+    <title>SafeSign</title>
+</head>
+<body>
+        <div class="container">
+            <h1>Password Generator</h1>
+            <div class="password-group">
+                <input type="test"  class="password" placeholder="Click the button!">  
+                <i class="fa-regular fa-copy"></i> 
+            </div>
+            <div class="choose">
+                        <div class="charLength">
+                            <label for="">Character length</label>
+                            <input type="number"  class="passwordLength" value="0" min="7" max="30"id="num">
+                        </div>
+
+                        <input type="range"   class="slider" min="1" max="30"id="charAmountLimit">
+
+                        <ul>
+                            <li>
+                                <input type="checkbox" class="checkBox" id="includeUpperCase">    
+                                <label for="includeUppercase">Include Uppercase</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="checkBox" id="includeLowerCase">    
+                                <label for="includeUppercase">Include Lowercase</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="checkBox" id="includeNumbers">
+                                <label for="includeNumbers">Include Numbers</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="checkBox" id="includeSymbols">
+                                <label for="includeSymbols">Include Symbols</label>
+                            </li>                                      
+                        </ul>
+                        <div class="passwordStrength">
+                            <div>
+                                <h2>STRENGTH</h2>
+                            </div>
+                            <div class="strengthLevel">
+                                <div class="level"></div>
+                                <div class="level"></div>
+                                <div class="level"></div>
+                                <div class="level"></div>
+                            </div>
+
+                        </div>
+                        <button>Generate <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+</body>
+<script src="main.js"></script>
+</html>
