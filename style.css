@@ -105,6 +105,10 @@ h1{
     background-color: var(--pozadina);
 }
 
+form{
+    background-color: #24232b;
+}
+
 button{
     display: flex;
     align-self: center;
