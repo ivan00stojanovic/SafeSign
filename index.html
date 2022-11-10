@@ -13,7 +13,7 @@
             <h1>Password Generator</h1>
             <div class="password-group">
                 <input type="test"  class="password" placeholder="Click the button!">  
-                <i class="fa-regular fa-copy"></i> 
+                <i id="clipboard" class="fa-regular fa-copy"></i> 
             </div>
             <div class="choose">
                         <div class="charLength">
@@ -25,13 +25,10 @@
 
                         <ul>
                             <li>
-                                <input type="checkbox" class="checkBox" id="includeUpperCase">    
+                                <input type="checkbox" class="checkBox" id="includeUppercase">    
                                 <label for="includeUppercase">Include Uppercase</label>
                             </li>
-                            <li>
-                                <input type="checkbox" class="checkBox" id="includeLowerCase">    
-                                <label for="includeUppercase">Include Lowercase</label>
-                            </li>
+                           
                             <li>
                                 <input type="checkbox" class="checkBox" id="includeNumbers">
                                 <label for="includeNumbers">Include Numbers</label>
@@ -45,6 +42,7 @@
                             <div>
                                 <h2>STRENGTH</h2>
                             </div>
+                            <span class="diff">None</span>
                             <div class="strengthLevel">
                                 <div class="level"></div>
                                 <div class="level"></div>
@@ -53,7 +51,8 @@
                             </div>
 
                         </div>
-                        <button>Generate <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="test">Generate <i class="fa-solid fa-arrow-right"></i></button>
+                        <h3 class="hidden">Password too short! </h3>
             </div>
         </div>
 </body> <!-- testing-->
