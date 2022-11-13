@@ -61,7 +61,7 @@ function generatePassword() {
     display.innerText = display.value
     
         //Changing the password strength indicator
-        if(length.value >= 8 && length.value <= 12){
+        if(length.value >= 0 && length.value <= 12){
             strength.innerText = 'Weak'
             strength.style.color = 'red'
             firstLevel.style.backgroundColor = 'red'
