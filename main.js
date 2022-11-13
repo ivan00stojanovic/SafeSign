@@ -15,13 +15,10 @@ const h3 = document.querySelector('h3')
 const h1 = document.querySelector('h1')
 let numbers = [0,1,2,3,4,5,6,7,8,9]
 let characters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-//let uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']testing, problems with .toUpperCase
 let symbols = ['@','#','$','%','^','&','*','(',')','_','+','?','<','>',':','{','}','[',']']
-let password = []
-let generateCounter = 0
 
-let passwordDisplay = [];
-let clickCounter = 0
+
+
 
 length.addEventListener('input', numberSync)
 slider.addEventListener('input', numberSync)
@@ -47,28 +44,21 @@ function copy() {
 clipboard.addEventListener('click', copy)
 
 function generatePassword() {
+    let passwordDisplay = []
     for(let i = 0; i<length.value; i++){
         if(includeNumbers.checked &&  i % 3 === 0){
-            passwordDisplay.push(numbers[Math.floor(Math.random() *10)])
-            console.log(display.value.length)      
+            passwordDisplay.push(numbers[Math.floor(Math.random() *10)])      
         }else if(includeSymbols.checked &&  i % 5 === 0 ){
-            passwordDisplay.push(symbols[Math.floor(Math.random() *19)])
-            console.log(display.value.length)      
+            passwordDisplay.push(symbols[Math.floor(Math.random() *19)])      
         }else if(includeUppercase.checked &&  i % 4 === 0){
-            passwordDisplay.push(characters[Math.floor(Math.random() *26)].toUpperCase())
-            console.log(display.value.length)      
+            passwordDisplay.push(characters[Math.floor(Math.random() *26)].toUpperCase())      
         }else{
         passwordDisplay.push(characters[Math.floor(Math.random() *26)])
         }
-    }
-     display.value = ''   
-    display.value = passwordDisplay.join('')
+    }//display the password and shuffle elements  
+    let shuffled = passwordDisplay.sort((a, b) => 0.5 - Math.random())
+    display.value = shuffled.join('')
     display.innerText = display.value
-    console.log(display.value.length)
-    console.log(clickCounter)
-    clickCounter++
-    
-    
     
         //Changing the password strength indicator
         if(length.value >= 8 && length.value <= 12){
