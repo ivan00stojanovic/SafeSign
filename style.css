@@ -148,8 +148,6 @@ h3{
     transition: 250ms ease-in;
  }
 
-
-
 button:hover > .fa-arrow-right{
     background-color: #18171f;
     color: var(--zelena);
