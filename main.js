@@ -18,8 +18,6 @@ let characters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p
 let symbols = ['@','#','$','%','^','&','*','(',')','_','+','?','<','>',':','{','}','[',']']
 
 
-
-
 length.addEventListener('input', numberSync)
 slider.addEventListener('input', numberSync)
 
